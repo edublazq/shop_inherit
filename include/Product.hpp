@@ -10,7 +10,12 @@ class Product
 		int			_price;
 	public:
 		Product();
-		~Product();
+		virtual ~Product();
+
+		std::string			getTitle() const;
+		std::string			getPlatform() const;
+		void				setTitle(std::string &title);
+		void				setPlatform(std::string &platform);
 
 		virtual std::string	toString() const;
 		virtual int			finalPrice() const;

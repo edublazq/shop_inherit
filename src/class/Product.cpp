@@ -28,3 +28,23 @@ int	Product::finalPrice() const
 {
 	return (_price + (_price * 0.21));
 }
+
+std::string	Product::getTitle() const
+{
+	return (_title);
+}
+
+void	Product::setTitle(std::string &title)
+{
+	_title = title;
+}
+
+std::string	Product::getPlatform() const
+{
+	return (_platform);
+}
+
+void	Product::setPlatform(std::string &platform)
+{
+	_platform = platform;
+}

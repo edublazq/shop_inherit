@@ -10,6 +10,7 @@ class physicalGame : public Product
 		physicalGame();
 		~physicalGame();
 
+		int	physicalGame::getStock() const;
 		std::string	toString() const;
 		void		sell();
 };

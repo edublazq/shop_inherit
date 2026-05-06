@@ -9,6 +9,11 @@ physicalGame::~physicalGame()
 {
 }
 
+int	physicalGame::getStock() const
+{
+	return (_stock);
+}
+
 std::string	physicalGame::toString() const
 {
 	std::string	new_str;
