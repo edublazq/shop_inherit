@@ -8,9 +8,10 @@ class physicalGame : public Product
 		int	_stock;
 	public:
 		physicalGame();
+		physicalGame(string &title, string &platform, int price, int stock);
 		~physicalGame();
 
 		int	physicalGame::getStock() const;
-		std::string	toString() const;
+		string	toString() const;
 		void		sell();
 };

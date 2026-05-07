@@ -12,10 +12,10 @@ class Shop
 		Shop();
 		~Shop();
 		void	addProduct(Product product);
-		void	removeProduct(std::string title);
+		void	removeProduct(string title);
 		void	showProducts();
-		Product*	searchByTitle(std::string title);
-		void	listByPlatform(std::string platform);
+		Product*	searchByTitle(string title);
+		void	listByPlatform(string platform);
 		Product	mostExpensive();
-		void	sellPhysical(std::string &title, int amount);
+		void	sellPhysical(string &title, int amount);
 };

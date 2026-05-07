@@ -2,21 +2,26 @@
 #include <iostream>
 #include <string>
 
+using std::string;
+using std::cout;
+using std::cin;
+
+
 class Product
 {
 	protected:
-		std::string	_title;
-		std::string	_platform;
+		string	_title;
+		string	_platform;
 		int			_price;
 	public:
 		Product();
 		virtual ~Product();
 
-		std::string			getTitle() const;
-		std::string			getPlatform() const;
-		void				setTitle(std::string &title);
-		void				setPlatform(std::string &platform);
+		string			getTitle() const;
+		string			getPlatform() const;
+		void				setTitle(string &title);
+		void				setPlatform(string &platform);
 
-		virtual std::string	toString() const;
+		virtual string	toString() const;
 		virtual int			finalPrice() const;
 };

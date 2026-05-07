@@ -13,7 +13,7 @@ void	Shop::addProduct(Product product)
 	_products.push_back(product);
 }
 
-void	Shop::removeProduct(std::string title)
+void	Shop::removeProduct(string title)
 {
 	for (auto it = _products.begin(); it != _products.end(); it++)
 	{
@@ -29,11 +29,11 @@ void	Shop::showProducts()
 {
 	for (auto it = _products.begin(); it != _products.end(); it++)
 	{
-		std::cout << it->toString() << std::endl << std::endl;
+		cout << it->toString() << std::endl << std::endl;
 	}
 }
 
-Product*	Shop::searchByTitle(std::string title)
+Product*	Shop::searchByTitle(string title)
 {
 	for (auto it = _products.begin(); it != _products.end(); it++)
 	{
@@ -42,13 +42,13 @@ Product*	Shop::searchByTitle(std::string title)
 	}	
 }
 
-void	Shop::listByPlatform(std::string platform)
+void	Shop::listByPlatform(string platform)
 {
 	for (auto it = _products.begin(); it != _products.end(); it++)
 	{
 		if (it->getPlatform() == platform)
 		{
-			std::cout << std::endl << it->toString() << std::endl;
+			cout << std::endl << it->toString() << std::endl;
 		}
 	}		
 }
@@ -67,7 +67,7 @@ Product	Shop::mostExpensive()
 	return (*expensive);
 }
 
-void	Shop::sellPhysical(std::string &title, int amount)
+void	Shop::sellPhysical(string &title, int amount)
 {
 	physicalGame	*game = 
 		dynamic_cast<physicalGame*>(searchByTitle(title));
@@ -77,7 +77,7 @@ void	Shop::sellPhysical(std::string &title, int amount)
 		game->sell();
 		if (game->getStock() <= 0)
 		{
-			std::cout << "All stock selled!" << std::endl;
+			cout << "All stock selled!" << std::endl;
 			return ;
 		}
 	}

@@ -3,7 +3,15 @@
 
 physicalGame::physicalGame()
 {
-};
+}
+
+physicalGame::physicalGame(string &title, string &platform, int price, int stock)
+{
+	_title = title;
+	_platform = platform;
+	_price = price;
+	_stock = stock;
+}
 
 physicalGame::~physicalGame()
 {
@@ -14,9 +22,9 @@ int	physicalGame::getStock() const
 	return (_stock);
 }
 
-std::string	physicalGame::toString() const
+string	physicalGame::toString() const
 {
-	std::string	new_str;
+	string	new_str;
 
 	new_str = Product::toString();
 	new_str.append("\nStock: ");

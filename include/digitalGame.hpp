@@ -7,7 +7,8 @@ class digitalGame : public Product
 		int	_gbSize;
 	public:
 		digitalGame();
+		digitalGame(string &title, string &platform, int price, int gb);
 		~digitalGame();
-		std::string	toString() const;
+		string	toString() const;
 		int			finalPrice() const;
 };

@@ -4,13 +4,21 @@ digitalGame::digitalGame()
 {
 }
 
+digitalGame::digitalGame(string &title, string &platform, int price, int gb)
+{
+	_title = title;
+	_platform = platform;
+	_price = price;
+	_gbSize = gb;
+}
+
 digitalGame::~digitalGame()
 {
 }
 
-std::string	digitalGame::toString() const
+string	digitalGame::toString() const
 {
-	std::string new_str;
+	string new_str;
 
 	new_str = Product::toString();
 	new_str.append("\nSize (GB): ");
