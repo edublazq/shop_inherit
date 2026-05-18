@@ -11,8 +11,8 @@ class Shop
 	public:
 		Shop();
 		~Shop();
-		void	addProduct(Product product);
-		void	removeProduct(string title);
+		void	addProduct(Product &product);
+		void	removeProduct(string &title);
 		void	showProducts();
 		Product*	searchByTitle(string title);
 		void	listByPlatform(string platform);

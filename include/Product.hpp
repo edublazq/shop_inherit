@@ -19,8 +19,8 @@ class Product
 
 		string			getTitle() const;
 		string			getPlatform() const;
-		void				setTitle(string &title);
-		void				setPlatform(string &platform);
+		void			setTitle(string &title);
+		void			setPlatform(string &platform);
 
 		virtual string	toString() const;
 		virtual int			finalPrice() const;

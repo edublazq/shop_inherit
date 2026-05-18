@@ -8,12 +8,12 @@ Shop::~Shop()
 {
 }
 
-void	Shop::addProduct(Product product)
+void	Shop::addProduct(Product &product)
 {
 	_products.push_back(product);
 }
 
-void	Shop::removeProduct(string title)
+void	Shop::removeProduct(string &title)
 {
 	for (auto it = _products.begin(); it != _products.end(); it++)
 	{
@@ -39,7 +39,8 @@ Product*	Shop::searchByTitle(string title)
 	{
 		if (it->getTitle() == title)
 			return &(*it);
-	}	
+	}
+	return (nullptr);
 }
 
 void	Shop::listByPlatform(string platform)
@@ -72,6 +73,11 @@ void	Shop::sellPhysical(string &title, int amount)
 	physicalGame	*game = 
 		dynamic_cast<physicalGame*>(searchByTitle(title));
 	
+	if (!game)
+	{
+		std::cerr << "Not game found!" << std::endl;
+		return ;
+	}
 	for (int i = 0; i < amount; i++)
 	{
 		game->sell();

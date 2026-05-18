@@ -11,7 +11,7 @@ class physicalGame : public Product
 		physicalGame(string &title, string &platform, int price, int stock);
 		~physicalGame();
 
-		int	physicalGame::getStock() const;
+		int	getStock() const;
 		string	toString() const;
-		void		sell();
+		void	sell();
 };
